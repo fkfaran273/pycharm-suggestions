@@ -27,6 +27,6 @@
   "data save method call": "    if app_data.get(\"channel\"):\n        save_tmp_data(af)",
   "nov device config for camp": "    'TESTING_DEVICE_CONFIG_NOV': {\n        \"OS_DISTRIBUTION\": [\"14\"] * 40 + [\"13\"] * 30 + [\"12\"] * 20 + [\"11\"] * 10\n    }",
   "adjust revenue currency": "u_data = {\n              \"revenue\": \"%.5f\" % revenue,\n              \"currency\": \"USD\",\n              }",
-  "manual function": "def test_func():\n    print(\"This is a test function\")\n    return \"Test completed successfully\"\n\nif __name__ == '__main__':\n    result = test_func()\n    print(result)\n",
-
+  "country check method": "def is_valid_country(af):\n    if not af.from_app(\"offer_id\"):\n        return \"true\"\n    ################################################################################################################################\n    country = None\n    _country = 'in'\n    for _ in range(3):\n        try:\n            resp = af.execute_request(url=\"http://geo.brdtest.com/mygeo.json\", httpmethod='get', headers={}, params={},\n                                      data={})\n            if resp and resp.get('data'):\n                print resp.get('data')\n                resp = json.loads(resp.get('data'))\n                country = resp.get('country')\n        except:\n            pass\n        if country and str(_country).lower() == str(country).lower():\n            return str(country).upper()\n        else:\n            return False\n    return False",
+  "country check method call": "    if app_data.get(\"channel\"):\n        if not is_valid_country(af):\n            return {'status': 'false'}"
 }
