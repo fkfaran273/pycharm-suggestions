@@ -1,0 +1,20 @@
+{
+  "name": "pycharm-suggestions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fkfaran273/pycharm-suggestions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fkfaran273/pycharm-suggestions/issues"
+  },
+  "homepage": "https://github.com/fkfaran273/pycharm-suggestions#readme",
+  "description": ""
+}
