@@ -54,6 +54,7 @@
   "AMplitude campaign dict": "\"amplitude\": {\"api_key\": \"990d24c506b079dc9f86ec81072ccdd1\",\n                              \"library\": \"amplitude-analytics-android/1.5.2\"}",
   "AMplitude instance": "amp = AmplitudeLib(campaign_data, app_data, device_data)",
   "product variation method": "def get_variation():\n    rr = random.randint(1, 100)\n    if rr <= 51:\n        var_ = {\"product_id\": \"com.ai.android.membership.1m.v5\", \"product_price\": \"13.99\", \"content_type\": \"CNProductManagerMembership\"}\n    elif rr <= 70:\n        var_ = {\"product_id\": \"com.ai.android.membership.12m.v5\", \"product_price\": \"47.99\", \"content_type\": \"CNProductManagerMembership\"}\n    elif rr <= 87:\n        var_ = {\"product_id\": \"com.ai.android.coinpack500.group1\", \"product_price\": \"9.99\", \"content_type\": \"CNProductManagerMembership\"}\n    else:\n        var_ = {\"product_id\": \"com.ai.android.coinpack2000.group1\", \"product_price\": \"29.99\", \"content_type\": \"CNProductManagerMembership\"}\n    return var_",
-  "trackier loyal user calls": "    for _ in range(2):\n        if random.randint(1,100)<=15:\n            time.sleep(random.randint(5, 10))\n            trackier.track_session()"
+  "trackier loyal user calls": "    for _ in range(2):\n        if random.randint(1,100)<=15:\n            time.sleep(random.randint(5, 10))\n            trackier.track_session()",
+  "cpf number generator": "def get_cpf_number():\n    \"\"\"pip2 install pycpfcnpj==1.5.1\n       for python 2 installation of supported version\"\"\"\n    from pycpfcnpj import gen, cpfcnpj\n    cpf_ramdom = gen.cpf()\n    if not cpfcnpj.validate(cpf_ramdom):\n        cpf_ramdom = gen.cpf()\n    return cpf_ramdom"
 }
     
